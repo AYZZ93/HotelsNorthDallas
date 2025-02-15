@@ -43,9 +43,22 @@ header {
 }
 
 #hero {
+    position: relative;
     text-align: center;
-    padding: 2rem;
-    background: var(--primary-color);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
 }
 
@@ -53,19 +66,38 @@ main {
     padding: 2rem;
 }
 
+#hotels h2, #contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 .hotel-list {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hotel-list li {
-    margin: 0.5rem 0;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
 .hotel-list li a {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 1.1rem;
+    display: block;
+    text-align: center;
+}
+
+.hotel-list li:hover {
+    transform: scale(1.05);
 }
 
 .hotel-list li a:hover {
@@ -82,9 +114,6 @@ footer {
     text-align: center;
     color: #fff;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsive design */
@@ -93,7 +122,27 @@ footer {
         flex-direction: column;
     }
 
+    .hotel-list {
+        flex-direction: column;
+    }
+
+    .hotel-list li {
+        width: 100%;
+        max-width: 400px;
+        margin: 0.5rem auto;
+    }
+
     .hotel-list li a {
         font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
