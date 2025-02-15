@@ -100,10 +100,6 @@ main {
     transform: scale(1.05);
 }
 
-.hotel-list li a:hover {
-    color: var(--secondary-color);
-}
-
 #contact {
     text-align: center;
     margin-top: 2rem;
@@ -114,27 +110,9 @@ footer {
     text-align: center;
     color: #fff;
     padding: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-    }
-
-    .hotel-list {
-        flex-direction: column;
-    }
-
-    .hotel-list li {
-        width: 100%;
-        max-width: 400px;
-        margin: 0.5rem auto;
-    }
-
-    .hotel-list li a {
-        font-size: 1rem;
-    }
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Animations */
