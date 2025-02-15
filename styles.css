@@ -1,0 +1,99 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a contemporary color palette */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-list li a:hover {
+    color: var(--secondary-color);
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hotel-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hotel-list li {
+    margin: 0.5rem 0;
+}
+
+.hotel-list li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.hotel-list li a:hover {
+    color: var(--secondary-color);
+}
+
+#contact {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .hotel-list li a {
+        font-size: 1rem;
+    }
+}
